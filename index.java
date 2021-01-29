@@ -6,7 +6,8 @@ int n = 300;
 int steps = 500;
 int x = 200;
 int y = 200;
-int r =(int)Math.random()*10+1);
+ 
+
 
 
 void setup() {
@@ -16,31 +17,34 @@ void setup() {
 
 void draw() {
 	stroke(1);
-  
+  println(r);
+
+rect(x, y, 10, 10);
+
+  int r = (int)(Math.random() * 4);
+
   //starts random walking from (200,200);
-     if(r==0){
+  if(r == 0){
+    y = y - 10;
+  }else if(r == 1){
+    y = y + 10;
+  } else if(r==2){
+    x= x-10;
+  } else if (r==3){
+    x=x+10;
+  }
 
-  rect(x, y, 10, 10);
-     } else if(r==1){
 
-  rect(250,250,10,10);
-     }else if (r==2){
 
-  rect(210,200,10,10);
-     }else if (r==3){
-  rect(230,270,10,10);
-     }else if (r==4){
-  rect(170,150,10,10);
-     }else if (r==5){
-  rect(220,210,10,10);
-     }
 
   //Here is where you should create the new rectangles to create the illusion of 'random walking'
   // You will need to make sure you dont draw more rectangles than the limit of steps
   //You'll need to use the Math.random() to decide how to create randomness in your drawing of rectangles.
   // Keep your canvas and rectangle width and height as I've given you
    
-   
+   if (steps=x && y){
+     frameRate(0);
+   }
 
  
   
